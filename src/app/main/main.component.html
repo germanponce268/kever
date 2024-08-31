@@ -1,0 +1,101 @@
+@if(!error){
+    <div class="container">
+            <div class="superbox">
+                <div class="box1">
+                    
+                </div>
+                <div class="box2">
+                    <button (click)="searchMovie()">
+                        Buscar Pelicula Random
+                    </button>
+                </div>
+            </div>
+            @if(!movieData.adult){
+                <div class="box3">
+                    <div class="title">
+                        <h2>{{movieData.title}}</h2>
+                    </div>
+                    <div class="body">
+                        <img [src]="image" alt="">
+                        <p>{{overview}}</p>
+                    </div>
+                    <div class="footer">
+                        <div class="group1">
+                            <p>Pais: {{movieData.origin_country}} </p>
+                            <p>Lenguaje: {{movieData.original_language}}</p>
+                        </div>
+                        <div class="group2">
+                            <p>Puntaje: {{movieData.vote_average}}</p>
+                            <p>Fecha de estreno: {{movieData.release_date}}</p>
+                        </div>
+                    </div>
+                </div>
+            }
+            @else{
+                <div class="box3">
+                    <div class="title">
+                        <h2>Contenitdo para adultos</h2>
+                    </div>
+                    <div class="body">
+                        <div class="content">
+                            @if(mayorEdad){
+                                <img [src]="image" alt="">
+                                <p>{{movieData.overview}}</p>
+                            }
+                            @else {
+                                <img src="/images/403.png" alt="">
+                                <p>Esta pelicula contiene material restringido a menores de edad, que incluye desnudez y representaciones explícitas de actividad sexual. Al entrar, afirma que tiene por lo menos 18 años de edad o la mayoría de edad en la jurisdicción desde que está accediendo el sitio web y que da consentimiento en ver contenido sexualmente explícito.</p>
+                            }
+                        </div>
+                        
+                    </div>
+                    <div class="btn">
+                        <button (click)="mayor()">Soy mayor de 18 años</button>
+                    </div>
+                    <div class="footer">
+                        <div class="group1">
+                            <p>Pais: {{movieData.origin_country}} </p>
+                            <p>Lenguaje: {{movieData.original_language}}</p>
+                        </div>
+                        <div class="group2">
+                            <p>Puntaje: {{movieData.vote_average}}</p>
+                            <p>Fecha de estreno: {{movieData.release_date}}</p>
+                        </div>
+                    </div>
+                </div>
+            }
+    </div>
+}
+@else{
+    <div class="container">
+        <div class="superbox">
+            <div class="box1">
+                
+            </div>
+            <div class="box2">
+                <button (click)="searchMovie()">
+                    Buscar Pelicula Random
+                </button>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="title">
+                <h2>No hay resultados</h2>
+            </div>
+            <div class="body">
+                <img src="/images/404.png" alt="">
+                <p>Vuelve a intentarlo</p>
+            </div>
+            <div class="footer">
+                <div class="group1">
+                    <p>Pais: {{movieData.origin_country}} </p>
+                    <p>Lenguaje: {{movieData.original_language}}</p>
+                </div>
+                <div class="group2">
+                    <p>Puntaje: {{movieData.vote_average}}</p>
+                    <p>Fecha de estreno: {{movieData.release_date}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}

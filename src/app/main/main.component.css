@@ -1,0 +1,118 @@
+.container{
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    background-image:url('/images/back2.png') ;
+    width: 1360px;
+    height: 768px;
+    color: aliceblue;
+    display: flex;
+    justify-content: left;
+}
+.container .superbox{
+    display: block;
+}
+.container .box1{
+    background-image: url('/images/kever.png');
+    width: 500px;
+    height: 500px;
+}
+
+.container .box2 button{
+    margin-left: 25%;
+    padding: 10px 20px;
+    background-color: #edba00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container .box3 .body{
+    display: flex;
+}
+.container .box3 .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .box3 .body p{
+    padding: 20px;
+}
+.container .btn  button{
+    margin-top: 5%;
+    margin-left: 25%;
+    padding: 10px 20px;
+    background-color: #edba00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+@media screen and (max-width:560px) {
+    .container{
+        background-image: url('/images/back.png');
+        background-color: aliceblue;
+        height: 740px;
+        width: 360px;
+        display: block;
+    
+    }
+
+    .container .box1{
+        background-position: top;
+        background-size: 200px;
+        background-repeat: no-repeat;
+        width: 360px;
+        height: 160px;
+    }
+    .container .box2 {
+        display: flex;
+        justify-content:center;
+    }
+
+
+    .container .superbox .box2 button{
+        margin-bottom: 2%;
+        margin-left:0%;
+    }
+
+    .container .box3 .title{
+        display: flex;
+        justify-content: center;
+        color: black;
+    }
+    .container .box3 .body{
+        display: flex;
+    }
+    .container .box3 .body .content{
+        display: flex;
+    }
+
+    .container .btn {
+        
+    }
+
+    .container .btn  button{
+    margin-top: 5%;
+    margin-left: 25%;
+    padding: 10px 20px;
+    background-color: #edba00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+
+    .container .box3 .body p{
+        padding: 10px;
+        color: black
+    };
+
+    .container .box3 .footer{
+        display: flex;
+        justify-content:space-around;
+    }
+
+    .container .box3 .footer p{
+        color:black;
+    }
+}
